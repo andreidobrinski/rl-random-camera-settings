@@ -1,21 +1,36 @@
-import React from "react"
-import { Link } from "gatsby"
-
+import React, { useState } from "react"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { randomize } from "../components/math"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const initialState = {
+  fov: null,
+  distance: null,
+  height: null,
+  angle: null,
+  stiffness: null,
+  swivel: null,
+  transition: null,
+}
+
+const IndexPage = () => {
+  const [state, setState] = useState(initialState)
+
+  return (
+    <Layout>
+      <SEO />
+      <p>Field of View: {state.fov}</p>
+      <p>Distance: {state.distance}</p>
+      <p>Height: {state.height}</p>
+      <p>Angle: {state.angle}</p>
+      <p>Stiffness: {state.stiffness}</p>
+      <p>Swivel: {state.swivel}</p>
+      <p>Transition: {state.transition}</p>
+      <button type="button" onClick={() => setState(randomize)}>
+        Randomize
+      </button>
+    </Layout>
+  )
+}
 
 export default IndexPage
