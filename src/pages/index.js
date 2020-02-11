@@ -19,16 +19,34 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO />
-      <p>Field of View: {state.fov}</p>
-      <p>Distance: {state.distance}</p>
-      <p>Height: {state.height}</p>
-      <p>Angle: {state.angle}</p>
-      <p>Stiffness: {state.stiffness}</p>
-      <p>Swivel: {state.swivel}</p>
-      <p>Transition: {state.transition}</p>
+      <p>Generate random camera settings in Rocket League!</p>
+      <p>
+        Field of View: <b>{state.fov}</b>
+      </p>
+      <p>
+        Distance: <b>{state.distance}</b>
+      </p>
+      <p>
+        Height: <b>{state.height}</b>
+      </p>
+      <p>
+        Angle: <b>{state.angle}</b>
+      </p>
+      <p>
+        Stiffness: <b>{state.stiffness}</b>
+      </p>
+      <p>
+        Swivel: <b>{state.swivel}</b>
+      </p>
+      <p>
+        Transition: <b>{state.transition}</b>
+      </p>
       <button type="button" onClick={() => setState(randomize)}>
         Randomize
       </button>
+      <a style={{ marginTop: `20px` }} href="">
+        How is this calculated?
+      </a>
     </Layout>
   )
 }
