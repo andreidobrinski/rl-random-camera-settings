@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -23,8 +22,11 @@ const Layout = ({ children }) => (
     >
       <main>{children}</main>
       <footer>
-        Built with ❤️ by{" "}
-        <a href="https://andreidobrinski.com">Andrei Dobrinski</a>
+        Built with{" "}
+        <span role="img" aria-label="heart emoji">
+          ❤️
+        </span>{" "}
+        by <a href="https://andreidobrinski.com">Andrei Dobrinski</a>
       </footer>
     </div>
   </>
