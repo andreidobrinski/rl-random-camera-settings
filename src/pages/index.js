@@ -44,7 +44,10 @@ const IndexPage = () => {
       <button type="button" onClick={() => setState(randomize)}>
         Randomize
       </button>
-      <a style={{ marginTop: `20px` }} href="">
+      <a
+        style={{ marginTop: `20px` }}
+        href="https://github.com/andreidobrinski/rl-random-camera-settings/blob/master/src/components/math.js"
+      >
         How is this calculated?
       </a>
     </Layout>
