@@ -4,6 +4,7 @@ module.exports = {
     description: `Generate random camera settings in Rocket League`,
     author: `@andreidobrinski`,
   },
+  pathPrefix: "/rl-random-camera-settings",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
